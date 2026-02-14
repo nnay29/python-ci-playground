@@ -1,1 +1,1 @@
-"# Practicing CI workflows with a simple python api" 
+"# Practicing CI workflows with a simple python api"
