@@ -1,0 +1,20 @@
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace  # Supprime les espaces inutiles en fin de ligne
+      - id: end-of-file-fixer    # Assure qu'il y a une ligne vide à la fin du fichier
+      - id: check-yaml           # Vérifie la syntaxe de tes fichiers YAML
+      - id: check-added-large-files # Empêche de commit de trop gros fichiers
+
+  - repo: https://github.com/psf/black
+    rev: 24.1.1
+    hooks:
+      - id: black                # Formateur de code strict (le "standard" Python)
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8               # Vérifie les erreurs de style et de logique simple
+        additional_dependencies: [flake8-bugbear]
